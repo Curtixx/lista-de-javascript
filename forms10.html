@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script >
+        function evt_calculo(){
+            var base = document.getElementById("txtbase").value;
+            var altura = document.getElementById("txtaltura").value;
+            var aux = 10;
+            var calculo = parseInt(base, aux) * parseInt(altura, aux) /2;   
+            var div = document.getElementById("mydiv");
+            div.innerHTML = calculo;
+        }
+    </script>
+</head>
+<body>
+    <form>
+        <p>digite a base do triangulo: </p>
+        <input type="number" name="" id="txtbase">
+        <p>digite a altura do triangulo: </p>
+        <input type="number" name="" id="txtaltura">
+        <br>
+        <br>
+        <input type="button" name="botao" id="btn" onclick="evt_calculo()" value="enviar">
+    </form>
+    <div id="mydiv">
+
+    </div>
+</body>
+</html>

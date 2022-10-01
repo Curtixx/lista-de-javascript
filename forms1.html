@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function evt_onclick(){
+            var Div = document.getElementById("minhadiv");
+            var retorno;
+            var i;
+            var num = document.getElementById("numero").value;
+            retorno = confirm("Deseja continuar? ")
+            if (retorno == true){
+                for(i=0;i<=10;i++){
+                    document.write(num + " x " + i + " = " + i*num + "<br/>");
+                    
+                }
+            }else{
+                alert("bye")
+            }
+        }
+    </script>
+</head>
+<body>
+    <form>
+        <input type="number" name="" id="numero">
+        <input type="button" name="" id="botao" value="enviar" onclick="evt_onclick()">
+    </form>
+    <div id="minhadiv">
+
+    </div>
+</body>
+</html>

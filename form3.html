@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function evt_onclick(){
+            var combo = document.getElementById("lista");
+            var aluno = document.getElementById("txtaluno").value;
+            var input = document.getElementById("txtaluno");
+            var op = document.createElement("option");
+            op.value = 3;
+            op.text = aluno;
+            combo.add(op, combo.options[0]);
+            
+            for(var i = 1; i <= combo.length; i++){
+                if (combo[i].text == combo[0].text){
+                    alert("aluno ja esta presente na lista");
+                    combo.remove(0);
+                }
+            }
+            
+            
+        }
+    </script>
+</head>
+<body>
+    <form>
+        <select name="lista" id="lista">
+            <option value="0">Henrique Curtis</option>
+            <option value="1">Gustavo Pacheco</option>
+        </select>
+        <input type="text" name="txtaluno" id="txtaluno">
+        <input type="button" name="botao" id="botao" value="adicionar" onclick="evt_onclick()">
+    </form>
+    
+</body>
+</html>
